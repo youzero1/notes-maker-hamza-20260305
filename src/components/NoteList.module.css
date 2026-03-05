@@ -1,0 +1,86 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Skeleton */
+.skeleton {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonHeader {
+  height: 20px;
+  background: var(--border);
+  border-radius: 4px;
+  width: 70%;
+}
+
+.skeletonLine {
+  height: 14px;
+  background: var(--secondary);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.skeletonLineShort {
+  height: 14px;
+  background: var(--secondary);
+  border-radius: 4px;
+  width: 55%;
+}
+
+.skeletonFooter {
+  height: 14px;
+  background: var(--secondary);
+  border-radius: 4px;
+  width: 40%;
+  margin-top: 0.5rem;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emptyIllustration {
+  margin-bottom: 0.5rem;
+}
+
+.emptyTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.emptyText {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 320px;
+  line-height: 1.7;
+}
